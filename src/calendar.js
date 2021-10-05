@@ -1,17 +1,18 @@
+import data from './data';
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment';
 import 'react-big-calendar/lib/sass/styles.scss';
-
 const localizer = momentLocalizer(moment);
 
-const MyCalendar = props => (
+let MyCalendar = props => (
   <div>
     <Calendar
       localizer={localizer}
-      //events={myEventsList}
+      events={data}
       startAccessor="start"
       endAccessor="end"
-      style={{ height: 500 }}
+      style={{ height: 700 }}
+      views={['month']}
     />
   </div>
 )
