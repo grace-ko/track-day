@@ -1,10 +1,15 @@
 import React from 'react';
 import Calendar from './calendar';
+import Header from './Header';
+
 
 class App extends React.Component {
   render() {
     return (
-      <Calendar />
+      <div>
+        <Header />
+        <Calendar />
+      </div>
     )
   }
 }
